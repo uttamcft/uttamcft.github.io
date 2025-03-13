@@ -1,57 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Uttam Singh</title>
+  <title>Dr. Uttam Singh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #fdfdfd;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
       color: #333;
     }
-    header {
-      text-align: center;
-      padding-bottom: 2rem;
-    }
+
+    /* Top Navigation */
     nav {
-      text-align: center;
-      margin-bottom: 2rem;
+      display: flex;
+      justify-content: flex-end;
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
     nav a {
-      margin: 0 15px;
+      margin-left: 20px;
       text-decoration: none;
       color: #007acc;
       font-weight: bold;
     }
-    .container {
+
+    /* Header Title */
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Main Content Layout */
+    .main-container {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
-      gap: 2rem;
+      padding: 2rem;
     }
-    .text {
-      flex: 2;
-    }
-    .photo {
+
+    .photo-section {
       flex: 1;
+      min-width: 250px;
+      text-align: center;
+      padding: 1rem;
     }
-    .photo img {
-      width: 100%;
+
+    .photo-section img {
       max-width: 200px;
-      border-radius: 10px;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .text-section {
+      flex: 2;
+      min-width: 300px;
+      padding: 1rem;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .text-section .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .text-section .btn:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Dr. Uttam Singh</h1>
-    <p>Welcome to my personal academic website</p>
-  </header>
-
+  <!-- Navigation Bar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
@@ -59,15 +100,21 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="container">
-    <div class="text">
-      <p>
-        I am a researcher in [your field]. My work focuses on [short academic intro]. 
-        Welcome to my academic homepage where you can learn more about my research, teaching, and publications.
-      </p>
-    </div>
-    <div class="photo">
+  <!-- Header -->
+  <header>
+    <h1>Dr. Uttam Singh</h1>
+  </header>
+
+  <!-- Main Photo + Text Section -->
+  <div class="main-container">
+    <div class="photo-section">
       <img src="uttam.jpg" alt="Uttam Singh">
+    </div>
+    <div class="text-section">
+      <p>Hello! I am a researcher in [Quantum Information / Physics / Your Area].  
+         Welcome to my academic homepage. Explore my research, teaching, and publications.</p>
+
+      <a href="research.html" class="btn">View My Research</a>
     </div>
   </div>
 
