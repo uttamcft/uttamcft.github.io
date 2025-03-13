@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Uttam Singh</title>
+  <title>Uttam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font: Forum -->
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,14 +16,6 @@
       background: #f9f9f9;
       color: #333;
     }
-
-    .p1 {
-  font-family: 'Forum', serif;
-  font-size: 1.2rem;  /* You can adjust this size */
-  line-height: 1.6;
-  margin-left: 30px;
-  color: #333;
-}
 
     nav {
       display: flex;
@@ -38,16 +33,15 @@
     }
 
     .header-strip {
-      background: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23e0e0e0' fill-opacity='1' d='M0,160L60,170.7C120,181,240,203,360,208C480,213,600,203,720,192C840,181,960,171,1080,149.3C1200,128,1320,96,1380,80L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
-      background-repeat: no-repeat;
+      background-color: #e0e0e0;
+      background-image: url('your-wavy-banner.svg'); /* Replace with actual banner image or SVG */
       background-size: cover;
       background-position: center;
-      color: #333;
+      color: white;
       text-align: center;
       padding: 3rem 1rem;
       font-size: 2.5rem;
       font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .main-container {
@@ -97,8 +91,61 @@
     .text-section .btn:hover {
       background-color: #005fa3;
     }
+
+    /* Custom paragraph style */
+    .p1 {
+      font-family: 'Forum', serif;
+      font-size: 1.3rem;
+      margin-left: 30px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* Two-column strip section */
+    .two-column-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      background-color: #eaeaea;
+    }
+
+    .column-text {
+      flex: 1;
+      min-width: 250px;
+      padding: 1.5rem;
+    }
+
+    .column-text p {
+      font-family: 'Forum', serif;
+      font-size: 1.3rem;
+      margin-left: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .column-image {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .column-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      .two-column-strip {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -122,6 +169,16 @@
       <a href="research.html" class="btn">View My Research</a>
     </div>
   </div>
-<p class="p1">This is a special paragraph styled using the Forum font and adjustable size.</p>
+
+  <!-- 🔥 Two Column Strip Section (NEW!) -->
+  <section class="two-column-strip">
+    <div class="column-text">
+      <p>This is a new section you can use to highlight something — an update, a paper, a collaboration, or any content. It’s elegant and responsive.</p>
+    </div>
+    <div class="column-image">
+      <img src="uttam.jpg" alt="Another Image of Uttam Singh">
+    </div>
+  </section>
+
 </body>
 </html>
