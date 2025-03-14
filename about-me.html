@@ -38,6 +38,22 @@
       text-decoration: underline;
     }
 
+
+       .no-underline-link {
+  text-decoration: none;
+  color: inherit; /* Same color as surrounding text */
+  font-weight: normal;
+  }
+
+   .no-underline-link:hover {
+   text-decoration: underline; /* Optional: underline on hover */
+  }
+
+    .highlight-cyan {
+  color: #f182b9;
+  font-weight: normal; /* optional */
+}
+
     .section-strip {
       background-color: #f9f9f9;
       padding: 2rem;
@@ -45,9 +61,9 @@
 
     .section-title {
       font-family: 'Forum', serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #333;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     .section-content {
@@ -124,21 +140,21 @@
     <div class="education-block">
       <div class="education-entry">2020–2022</div>
       <div class="education-entry">Postdoctoral fellow at Center for Theoretical Physics PAS, Warsaw, Poland</div>
-      <div class="education-entry">Advisor: Jarosław Korbicz </div>
+      <div class="education-entry">Postdoc Advisor: <a href="https://django.cft.edu.pl/people/112/" class="no-underline-link">Jarosław Korbicz</a> </div>
     </div>
     <div class="education-block">
       <div class="education-entry">2017–2020</div>
       <div class="education-entry">Postdoctoral fellow at Université libre de Bruxelles, Brussels, Belgium</div>
-      <div class="education-entry">Advisor: Prof. Nicolas Cerf</div>
+      <div class="education-entry">Postdoc Advisor: <a href="http://quic.ulb.ac.be/members/ncerf" class="no-underline-link">Nicolas Cerf</a></div>
     </div>
     <div class="education-block">
       <div class="education-entry">2011–2017</div>
       <div class="education-entry">Ph D from Harish-Chandra Research Institute, Prayagraj, India</div>
-      <div class="education-entry">Advisor: Prof. Arun Pati</div>
+      <div class="education-entry">PhD Advisor: <a href="https://www.hri.res.in/~akpati/" class="no-underline-link">Arun Kumar Pati</a></div>
     </div>
     <div class="education-block">
       <div class="education-entry">2009–2011</div>
-      <div class="education-entry">M Sc from Jawaharlal Nehru University, New Delhi, India</div>
+      <div class="education-entry">MSc from Jawaharlal Nehru University, New Delhi, India</div>
     </div>
   </div>
 
