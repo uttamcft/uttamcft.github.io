@@ -32,6 +32,18 @@
       font-weight: bold;
     }
 
+
+    .no-underline-link {
+  text-decoration: none;
+  color: inherit; /* Same color as surrounding text */
+  font-weight: normal;
+  }
+
+   .no-underline-link:hover {
+   text-decoration: underline; /* Optional: underline on hover */
+  }
+
+    
     .header-strip {
       background-color: #e0e0e0;
       background-image: url('your-wavy-banner.svg'); /* Replace with your banner SVG */
@@ -294,7 +306,7 @@
     <img src="linkedin.png" alt="Linkedin">
   </a>
 </div>
-      <p>I am an Assistant Professor at the Centre for Quantum Science and Technology (CQST), IIIT Hyderabad.</p>
+      <p>I am an Assistant Professor at the Centre for Quantum Science and Technology (<a href="https://cqst.iiit.ac.in/" class="no-underline-link">CQST</a>), IIIT Hyderabad.</p>
       <a href="about-me.html" class="btn">About me</a>
     </div>
   </div>
