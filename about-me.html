@@ -5,6 +5,7 @@
   <title>About Me - Uttam Singh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Google Font: Forum -->
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
   <style>
@@ -38,41 +39,28 @@
       text-decoration: underline;
     }
 
-    .header-strip {
+    .section-strip {
       background-color: #e0e0e0;
-      background-image: url('your-wavy-banner.svg');
-      background-size: cover;
-      background-position: center;
-      color: #5f8dc9;
-      text-align: center;
-      padding: 3rem 1rem;
-      font-size: 2.5rem;
+      padding: 2rem;
       font-family: 'Forum', serif;
-      font-weight: normal;
     }
 
-    .main-content {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      font-family: 'Forum', serif;
-      line-height: 1.8;
+    .section-strip h2 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #5f8dc9;
+    }
+
+    .section-content {
+      padding: 2rem;
       font-size: 1.2rem;
+      line-height: 1.7;
+      font-family: 'Forum', serif;
     }
 
-    .main-content h2 {
-      font-size: 2rem;
-      color: #5f8dc9;
-      margin-bottom: 1rem;
-    }
-
-    .main-content ul {
-      margin-top: 0.5rem;
-      padding-left: 1.5rem;
-    }
-
-    .main-content li {
-      margin-bottom: 0.5rem;
+    .education-block {
+      margin-top: 1rem;
+      padding-left: 1rem;
     }
 
     footer {
@@ -107,6 +95,7 @@
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="research-teaching.html">Research & Teaching</a>
@@ -115,33 +104,30 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <header class="header-strip">
-    About Me
-  </header>
+  <div class="section-strip">
+    <h2>About</h2>
+  </div>
 
-  <div class="main-content">
-    <p>I am an Assistant Professor at the Centre for Quantum Science and Technology (CQST), IIIT Hyderabad. My broad research interests lie at the intersection of quantum information theory and quantum thermodynamics. I am particularly interested in resource theories, quantum estimation, quantum correlations, and quantum foundations.</p>
+  <div class="section-content">
+    <p>I have a deep interest in the mathematical aspects of quantum information theory and computation. I am particularly fascinated by their potential to shed light on foundational challenges such as the quantum measurement problem and quantum thermodynamics. Moreover, I aspire to leverage these mathematical tools to explore and develop energy-efficient quantum technologies, aiming to contribute to both fundamental understanding and practical advancements in the field.</p>
+  </div>
 
+  <div class="section-strip">
     <h2>Education</h2>
-    <ul>
-      <li>PhD in Physics, Harish-Chandra Research Institute, Allahabad</li>
-      <li>MSc in Physics, University of Hyderabad</li>
-      <li>BSc in Physics, University of Delhi</li>
-    </ul>
+  </div>
 
-    <h2>Postdoctoral Experience</h2>
-    <ul>
-      <li>Postdoctoral Fellow at Institute of Theoretical Physics, University of Warsaw</li>
-      <li>Postdoctoral Fellow at International Centre for Theoretical Sciences (ICTS-TIFR), Bengaluru</li>
-    </ul>
+  <div class="section-content">
+    <div class="education-block">
+      2022–2023<br>
+      Postdoctoral Fellow<br>
+      Advisor: Jarek
+    </div>
 
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Quantum Resource Theories</li>
-      <li>Quantum Thermodynamics</li>
-      <li>Quantum Information and Estimation Theory</li>
-      <li>Quantum Foundations</li>
-    </ul>
+    <div class="education-block">
+      2016–2022<br>
+      PhD<br>
+      Advisor: [Your Advisor's Name Here]
+    </div>
   </div>
 
   <footer>
@@ -157,5 +143,6 @@
       </a>
     </div>
   </footer>
+
 </body>
 </html>
