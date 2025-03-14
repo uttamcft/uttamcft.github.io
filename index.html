@@ -60,7 +60,7 @@
     }
 
     .photo-section img {
-      width: 200px;       /* ✅ Adjusted Image Size */
+      width: 200px;
       max-width: 100%;
       height: auto;
       border-radius: 12px;
@@ -102,6 +102,70 @@
       color: #444;
     }
 
+    /* Updates Strip */
+    .updates-strip {
+      background-image: url('your-wavy-banner.svg');
+      background-size: cover;
+      background-position: center;
+      padding: 1.5rem 2rem;
+      color: white;
+    }
+
+    .updates-strip h2 {
+      font-family: 'Forum', serif;
+      font-size: 2rem;
+      margin: 0;
+      text-align: left;
+    }
+
+    .updates-strip .divider {
+      width: 60px;
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Timeline update block */
+    .timeline {
+      background-color: #ffffff;
+      padding: 2rem;
+      margin-top: -1rem;
+    }
+
+    .timeline-entry {
+      display: flex;
+      flex-direction: column;
+      border-left: 3px solid #007acc;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background-color: #007acc;
+      border-radius: 50%;
+    }
+
+    .timeline-entry .date {
+      font-weight: bold;
+      color: #007acc;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-entry .desc {
+      font-family: 'Forum', serif;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
     /* Two-column strip section */
     .two-column-strip {
       display: flex;
@@ -136,7 +200,7 @@
     }
 
     .column-image img {
-      width: 250px;        /* ✅ Image size control here */
+      width: 250px;
       max-width: 100%;
       height: auto;
       border-radius: 12px;
@@ -175,7 +239,29 @@
     </div>
   </div>
 
-  <!-- 🔥 Two Column Strip Section (New + Image Size Adjusted) -->
+  <!-- 🆕 Updates Strip -->
+  <section class="updates-strip">
+    <h2>Updates</h2>
+    <div class="divider"></div>
+  </section>
+
+  <!-- 📌 Timeline Updates -->
+  <section class="timeline">
+    <div class="timeline-entry">
+      <div class="date">March 13, 2025</div>
+      <div class="desc">Launched the redesigned academic homepage with a fresh banner and timeline section.</div>
+    </div>
+    <div class="timeline-entry">
+      <div class="date">Feb 28, 2025</div>
+      <div class="desc">Published new paper on quantum information protocols in <i>Journal of Quantum Theory</i>.</div>
+    </div>
+    <div class="timeline-entry">
+      <div class="date">Jan 10, 2025</div>
+      <div class="desc">Started teaching Quantum Mechanics II for Spring 2025 semester.</div>
+    </div>
+  </section>
+
+  <!-- 📌 Two Column Section -->
   <section class="two-column-strip">
     <div class="column-text">
       <p>This is a new section you can use to highlight something — an update, a paper, a collaboration, or any content. It’s elegant and responsive.</p>
