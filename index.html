@@ -101,6 +101,26 @@
       color: #444;
     }
 
+    .image-links-small {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.image-links-small img {
+  width: 40px;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.image-links-small img:hover {
+  transform: scale(1.05);
+}
+
+
     .update-strip {
       background-image: url('your-wavy-banner.svg');
       background-size: cover;
@@ -222,18 +242,18 @@
     <div class="text-section">
       <p>Uttam Singh</p>
 
-      <!-- ✅ Image Links Below -->
-      <div class="image-links">
-        <a href="https://cqst.iiit.ac.in/" target="_blank">
-          <img src="scholar.png" alt="Google Scholar">
-        </a>
-        <a href="https://iiit.ac.in/" target="_blank">
-          <img src="arxiv.png" alt="arXiv">
-        </a>
-        <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
-          <img src="linkedin.png" alt="Linkedin">
-        </a>
-      </div>
+      <!-- ✅ Small Left-Aligned Logos -->
+<div class="image-links-small">
+  <a href="https://cqst.iiit.ac.in/" target="_blank">
+    <img src="cqst-logo.png" alt="CQST Logo">
+  </a>
+  <a href="https://iiit.ac.in/" target="_blank">
+    <img src="iiith-logo.png" alt="IIITH Logo">
+  </a>
+  <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+    <img src="google-scholar-logo.png" alt="Google Scholar">
+  </a>
+</div>
       <p>I am an Assistant Professor at the Centre for Quantum Science and Technology (CQST), IIIT Hyderabad.</p>
       <a href="about-me.html" class="btn">About me</a>
     </div>
