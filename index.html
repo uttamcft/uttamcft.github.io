@@ -171,6 +171,25 @@
       margin: 1.5rem 0;
     }
 
+    .image-links {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .image-links a img {
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .image-links a img:hover {
+      transform: scale(1.05);
+    }
+
     @media screen and (max-width: 768px) {
       .timeline-entry .entry-box {
         flex-direction: column;
@@ -203,6 +222,20 @@
     <div class="text-section">
       <p>Uttam Singh <br>
         I am an Assistant Professor at the Centre for Quantum Science and Technology (CQST), IIIT Hyderabad.</p>
+
+      <!-- ✅ Image Links Below -->
+      <div class="image-links">
+        <a href="https://cqst.iiit.ac.in/" target="_blank">
+          <img src="cqst-logo.png" alt="CQST Logo">
+        </a>
+        <a href="https://iiit.ac.in/" target="_blank">
+          <img src="iiith-logo.png" alt="IIITH Logo">
+        </a>
+        <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+          <img src="google-scholar-logo.png" alt="Google Scholar">
+        </a>
+      </div>
+
       <a href="about-me.html" class="btn">About me</a>
     </div>
   </div>
