@@ -5,7 +5,6 @@
   <title>About Me - Uttam Singh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Font: Forum -->
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
   <style>
@@ -40,32 +39,40 @@
     }
 
     .header-strip {
-      background-color: #f9f9f9;
+      background-color: #e0e0e0;
       background-image: url('your-wavy-banner.svg');
       background-size: cover;
       background-position: center;
       color: #5f8dc9;
-      text-align: left;
+      text-align: center;
       padding: 3rem 1rem;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-family: 'Forum', serif;
       font-weight: normal;
-      margin-left: 10px;
     }
 
-    .about-content {
-      padding: 2rem;
-      font-size: 1.2rem;
+    .main-content {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
       font-family: 'Forum', serif;
       line-height: 1.8;
-      max-width: 900px;
-      margin: 0 auto;
+      font-size: 1.2rem;
     }
 
-    .footer-divider {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 2rem 0 0;
+    .main-content h2 {
+      font-size: 2rem;
+      color: #5f8dc9;
+      margin-bottom: 1rem;
+    }
+
+    .main-content ul {
+      margin-top: 0.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .main-content li {
+      margin-bottom: 0.5rem;
     }
 
     footer {
@@ -100,7 +107,6 @@
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="research-teaching.html">Research & Teaching</a>
@@ -110,25 +116,33 @@
   </nav>
 
   <header class="header-strip">
-    About
+    About Me
   </header>
 
-  <div class="about-content">
-    <p>
-      I am an Assistant Professor at the Centre for Quantum Science and Technology (CQST), IIIT Hyderabad.
-      My research interests lie in quantum information theory, quantum foundations, and statistical physics. 
-      I enjoy exploring the fundamental limits of nature’s computation and information processing capabilities.
-    </p>
-    <p>
-      Prior to joining IIIT Hyderabad, I held postdoctoral positions at the University of Gdansk and the Tata Institute of Fundamental Research. 
-      I received my Ph.D. in Physics from the Indian Institute of Science Education and Research (IISER), Mohali.
-    </p>
-    <p>
-      I am always happy to work with motivated students interested in exploring the theoretical frontiers of quantum science.
-    </p>
-  </div>
+  <div class="main-content">
+    <p>I am an Assistant Professor at the Centre for Quantum Science and Technology (CQST), IIIT Hyderabad. My broad research interests lie at the intersection of quantum information theory and quantum thermodynamics. I am particularly interested in resource theories, quantum estimation, quantum correlations, and quantum foundations.</p>
 
-  <hr class="footer-divider">
+    <h2>Education</h2>
+    <ul>
+      <li>PhD in Physics, Harish-Chandra Research Institute, Allahabad</li>
+      <li>MSc in Physics, University of Hyderabad</li>
+      <li>BSc in Physics, University of Delhi</li>
+    </ul>
+
+    <h2>Postdoctoral Experience</h2>
+    <ul>
+      <li>Postdoctoral Fellow at Institute of Theoretical Physics, University of Warsaw</li>
+      <li>Postdoctoral Fellow at International Centre for Theoretical Sciences (ICTS-TIFR), Bengaluru</li>
+    </ul>
+
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Quantum Resource Theories</li>
+      <li>Quantum Thermodynamics</li>
+      <li>Quantum Information and Estimation Theory</li>
+      <li>Quantum Foundations</li>
+    </ul>
+  </div>
 
   <footer>
     <div class="footer-text">
@@ -143,6 +157,5 @@
       </a>
     </div>
   </footer>
-
 </body>
 </html>
