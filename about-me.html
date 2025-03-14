@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me - Uttam Singh</title>
+  <title>About - Uttam Singh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Font: Forum -->
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
   <style>
@@ -40,27 +39,34 @@
     }
 
     .section-strip {
-      background-color: #e0e0e0;
+      background-color: #f9f9f9;
       padding: 2rem;
-      font-family: 'Forum', serif;
     }
 
-    .section-strip h2 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: #5f8dc9;
+    .section-title {
+      font-family: 'Forum', serif;
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
     }
 
     .section-content {
-      padding: 2rem;
-      font-size: 1.2rem;
-      line-height: 1.7;
-      font-family: 'Forum', serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     .education-block {
-      margin-top: 1rem;
-      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .education-entry {
+      margin-left: 10.5rem; /* Indent equal to Education heading offset */
+    }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0 0;
     }
 
     footer {
@@ -95,7 +101,6 @@
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="research-teaching.html">Research & Teaching</a>
@@ -105,30 +110,27 @@
   </nav>
 
   <div class="section-strip">
-    <h2>About</h2>
-  </div>
-
-  <div class="section-content">
-    <p>I have a deep interest in the mathematical aspects of quantum information theory and computation. I am particularly fascinated by their potential to shed light on foundational challenges such as the quantum measurement problem and quantum thermodynamics. Moreover, I aspire to leverage these mathematical tools to explore and develop energy-efficient quantum technologies, aiming to contribute to both fundamental understanding and practical advancements in the field.</p>
+    <div class="section-title">About</div>
+    <div class="section-content">
+      <p>I have a deep interest in the mathematical aspects of quantum information theory and computation. I am particularly fascinated by their potential to shed light on foundational challenges such as the quantum measurement problem and quantum thermodynamics. Moreover, I aspire to leverage these mathematical tools to explore and develop energy-efficient quantum technologies, aiming to contribute to both fundamental understanding and practical advancements in the field.</p>
+    </div>
   </div>
 
   <div class="section-strip">
-    <h2>Education</h2>
-  </div>
-
-  <div class="section-content">
+    <div class="section-title">Education</div>
     <div class="education-block">
-      2022–2023<br>
-      Postdoctoral Fellow<br>
-      Advisor: Jarek
+      <div class="education-entry">2022–2023</div>
+      <div class="education-entry">Post Doctoral Fellow</div>
+      <div class="education-entry">Advisor: Jarek</div>
     </div>
-
     <div class="education-block">
-      2016–2022<br>
-      PhD<br>
-      Advisor: [Your Advisor's Name Here]
+      <div class="education-entry">2017–2022</div>
+      <div class="education-entry">PhD in Physics</div>
+      <div class="education-entry">Advisor: Prof. XYZ</div>
     </div>
   </div>
+
+  <hr class="footer-divider">
 
   <footer>
     <div class="footer-text">
@@ -143,6 +145,5 @@
       </a>
     </div>
   </footer>
-
 </body>
 </html>
