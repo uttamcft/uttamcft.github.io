@@ -93,6 +93,39 @@
 .text-section .btn:hover {
   background-color: #2871d6; /* Slightly darker gray on hover */
 }
+
+ .footer-divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0 0;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #f5f5f5;
+      font-size: 0.95rem;
+      font-family: Arial, sans-serif;
+      color: #666;
+    }
+
+    .footer .footer-text {
+      flex: 1;
+    }
+
+    .footer .footer-logos {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer .footer-logos img {
+      height: 30px;
+      width: auto;
+    }
+
+    
     .p1 {
       font-family: 'Forum', serif;
       font-size: 1.3rem;
@@ -324,6 +357,22 @@ U. Singh, A. Sawicki, and J. K. Korbicz, <i>"Pointer States in the Born-Markov A
       </div>
     </div>
   </section>
+
+  <hr class="footer-divider">
+
+  <footer>
+    <div class="footer-text">
+      © 2025 Uttam Singh. All rights reserved.
+    </div>
+    <div class="footer-logos">
+      <a href="https://example.com/logo1" target="_blank">
+        <img src="logo1.png" alt="Logo 1">
+      </a>
+      <a href="https://example.com/logo2" target="_blank">
+        <img src="logo2.png" alt="Logo 2">
+      </a>
+    </div>
+  </footer>
 
 </body>
 </html>
