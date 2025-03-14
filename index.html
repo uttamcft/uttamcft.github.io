@@ -34,7 +34,7 @@
 
     .header-strip {
       background-color: #e0e0e0;
-      background-image: url('your-wavy-banner.svg'); /* Replace with actual SVG or image file */
+      background-image: url('your-wavy-banner.svg'); /* Replace with actual SVG or image */
       background-size: cover;
       background-position: center;
       color: white;
@@ -102,13 +102,20 @@
       color: #444;
     }
 
-    /* Updates Strip */
+    /* Updates Strip Styling */
     .updates-strip {
-      background-image: url('your-wavy-banner.svg');
+      position: relative;
+      background-image: url('your-wavy-banner.svg'); /* Same background as banner */
       background-size: cover;
       background-position: center;
-      padding: 1.5rem 2rem;
+      padding: 2.5rem 2rem;
       color: white;
+    }
+
+    .updates-strip .overlay {
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
     }
 
     .updates-strip h2 {
@@ -121,21 +128,17 @@
     .updates-strip .divider {
       width: 60px;
       height: 3px;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: #ffffff;
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
     }
 
-    /* Timeline update block */
+    /* Timeline Section */
     .timeline {
-      background-color: #ffffff;
       padding: 2rem;
-      margin-top: -1rem;
     }
 
     .timeline-entry {
-      display: flex;
-      flex-direction: column;
       border-left: 3px solid #007acc;
       padding-left: 1rem;
       margin-bottom: 1.5rem;
@@ -146,7 +149,7 @@
       content: '';
       position: absolute;
       left: -8px;
-      top: 6px;
+      top: 5px;
       width: 12px;
       height: 12px;
       background-color: #007acc;
@@ -155,15 +158,29 @@
 
     .timeline-entry .date {
       font-weight: bold;
-      color: #007acc;
-      font-size: 0.95rem;
-      margin-bottom: 0.3rem;
+      color: #555;
+      margin-bottom: 0.2rem;
     }
 
     .timeline-entry .desc {
-      font-family: 'Forum', serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #333;
+    }
+
+    .toggle-btn {
+      background-color: #007acc;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background-color: #005fa3;
     }
 
     /* Two-column strip section */
@@ -239,29 +256,36 @@
     </div>
   </div>
 
-  <!-- 🆕 Updates Strip -->
+  <!-- ✅ Updates Strip Section -->
   <section class="updates-strip">
-    <h2>Updates</h2>
-    <div class="divider"></div>
+    <div class="overlay">
+      <h2>Updates</h2>
+      <div class="divider"></div>
+    </div>
   </section>
 
-  <!-- 📌 Timeline Updates -->
+  <!-- ✅ Timeline Update Section with Collapsible Content -->
   <section class="timeline">
     <div class="timeline-entry">
       <div class="date">March 13, 2025</div>
       <div class="desc">Launched the redesigned academic homepage with a fresh banner and timeline section.</div>
     </div>
-    <div class="timeline-entry">
-      <div class="date">Feb 28, 2025</div>
-      <div class="desc">Published new paper on quantum information protocols in <i>Journal of Quantum Theory</i>.</div>
+
+    <div class="timeline-collapsible" id="moreUpdates" style="display: none;">
+      <div class="timeline-entry">
+        <div class="date">Feb 28, 2025</div>
+        <div class="desc">Published new paper on quantum information protocols in <i>Journal of Quantum Theory</i>.</div>
+      </div>
+      <div class="timeline-entry">
+        <div class="date">Jan 10, 2025</div>
+        <div class="desc">Started teaching Quantum Mechanics II for Spring 2025 semester.</div>
+      </div>
     </div>
-    <div class="timeline-entry">
-      <div class="date">Jan 10, 2025</div>
-      <div class="desc">Started teaching Quantum Mechanics II for Spring 2025 semester.</div>
-    </div>
+
+    <button class="toggle-btn" onclick="toggleUpdates()">Show More</button>
   </section>
 
-  <!-- 📌 Two Column Section -->
+  <!-- ✅ Two Column Highlight Section -->
   <section class="two-column-strip">
     <div class="column-text">
       <p>This is a new section you can use to highlight something — an update, a paper, a collaboration, or any content. It’s elegant and responsive.</p>
@@ -270,6 +294,21 @@
       <img src="uttam.jpg" alt="Another Image of Uttam Singh">
     </div>
   </section>
+
+  <!-- ✅ Toggle Script -->
+  <script>
+    function toggleUpdates() {
+      const more = document.getElementById('moreUpdates');
+      const btn = document.querySelector('.toggle-btn');
+      if (more.style.display === "none") {
+        more.style.display = "block";
+        btn.innerText = "Show Less";
+      } else {
+        more.style.display = "none";
+        btn.innerText = "Show More";
+      }
+    }
+  </script>
 
 </body>
 </html>
