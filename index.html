@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Uttam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google Font: Forum -->
+  
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
   <style>
@@ -33,15 +33,41 @@
     }
 
     .header-strip {
-      background-color: #e0e0e0;
-      background-image: url('your-wavy-banner.svg'); /* Replace with actual SVG or image file */
+      background-image: url('your-wavy-banner.svg'); /* Replace with actual image file */
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 2.5rem 1rem;
       font-size: 2.5rem;
       font-weight: bold;
+      font-family: 'Forum', serif;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .updates-strip {
+      background-image: url('your-wavy-banner.svg'); /* Same background */
+      background-size: cover;
+      background-position: center;
+      padding: 1.5rem 2rem;
+      color: white;
+    }
+
+    .updates-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: left;
+      font-family: 'Forum', serif;
+    }
+
+    .updates-date {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #f0f0f0;
+      text-align: left;
+      margin-top: 0.3rem;
+      margin-left: 0.2rem;
+      font-style: italic;
     }
 
     .main-container {
@@ -60,9 +86,8 @@
     }
 
     .photo-section img {
-      width: 200px;       /* ✅ Adjusted Image Size */
-      max-width: 100%;
-      height: auto;
+      max-width: 200px;
+      width: 100%;
       border-radius: 12px;
     }
 
@@ -93,66 +118,46 @@
       background-color: #005fa3;
     }
 
-    /* Custom paragraph style */
     .p1 {
       font-family: 'Forum', serif;
-      font-size: 1.3rem;
-      margin-left: 30px;
-      line-height: 1.6;
-      color: #444;
+      font-size: 1.2rem;
+      margin-left: 20px;
     }
 
-    /* Two-column strip section */
     .two-column-strip {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      padding: 3rem 2rem;
-      background-color: #eaeaea;
+      background-color: #f0f0f0;
+      padding: 2rem;
     }
 
-    .column-text {
-      flex: 1;
-      min-width: 250px;
-      padding: 1.5rem;
-    }
-
-    .column-text p {
+    .two-column-strip .column-text {
+      flex: 2;
+      min-width: 300px;
+      padding: 1rem;
       font-family: 'Forum', serif;
-      font-size: 1.3rem;
-      margin-left: 20px;
-      line-height: 1.6;
-      color: #333;
     }
 
-    .column-image {
+    .two-column-strip .column-image {
       flex: 1;
-      min-width: 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.5rem;
+      min-width: 200px;
+      text-align: center;
+      padding: 1rem;
     }
 
-    .column-image img {
-      width: 250px;        /* ✅ Image size control here */
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    @media screen and (max-width: 768px) {
-      .two-column-strip {
-        flex-direction: column;
-      }
+    .two-column-strip .column-image img {
+      max-width: 180px;
+      width: 100%;
+      border-radius: 10px;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation Menu -->
   <nav>
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
@@ -160,10 +165,18 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Header Banner -->
   <header class="header-strip">
     Welcome to my page!
   </header>
 
+  <!-- Updates Strip -->
+  <section class="updates-strip">
+    <div class="updates-text">Updates</div>
+    <div class="updates-date">March 13, 2025</div>
+  </section>
+
+  <!-- Main Section (Photo + Text) -->
   <div class="main-container">
     <div class="photo-section">
       <img src="uttam.jpg" alt="Uttam Singh">
@@ -175,12 +188,10 @@
     </div>
   </div>
 
-  <!-- 🔥 Two Column Strip Section (New + Image Size Adjusted) -->
+  <!-- Two Column Strip -->
   <section class="two-column-strip">
     <div class="column-text">
-      <p>December, 2024
-New Preprint!
-S. Charaborty, S. Das, A. Ghorui, S. Hazra, U. Singh, "Sample Complexity of Black Box Work Extraction",  arXiv:2412.02673</p>
+      <p>This is a new section you can use to highlight something — an update, a paper, a collaboration, or any content. It’s elegant and responsive.</p>
     </div>
     <div class="column-image">
       <img src="uttam.jpg" alt="Another Image of Uttam Singh">
