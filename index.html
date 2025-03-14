@@ -34,7 +34,7 @@
 
     .header-strip {
       background-color: #e0e0e0;
-      background-image: url('your-wavy-banner.svg'); /* Replace with actual SVG or image */
+      background-image: url('your-wavy-banner.svg'); /* Replace with your banner SVG */
       background-size: cover;
       background-position: center;
       color: white;
@@ -93,7 +93,6 @@
       background-color: #005fa3;
     }
 
-    /* Custom paragraph style */
     .p1 {
       font-family: 'Forum', serif;
       font-size: 1.3rem;
@@ -102,136 +101,88 @@
       color: #444;
     }
 
-    /* Updates Strip Styling */
-    .updates-strip {
-      position: relative;
-      background-image: url('your-wavy-banner.svg'); /* Same background as banner */
+    .update-strip {
+      background-image: url('your-wavy-banner.svg'); /* Same as banner */
       background-size: cover;
       background-position: center;
-      padding: 2.5rem 2rem;
       color: white;
-    }
-
-    .updates-strip .overlay {
-      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-    }
-
-    .updates-strip h2 {
-      font-family: 'Forum', serif;
+      padding: 1.5rem 2rem;
       font-size: 2rem;
-      margin: 0;
+      font-weight: bold;
       text-align: left;
     }
 
-    .updates-strip .divider {
-      width: 60px;
-      height: 3px;
-      background-color: #ffffff;
-      margin-top: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Timeline Section */
     .timeline {
       padding: 2rem;
     }
 
     .timeline-entry {
-      border-left: 3px solid #007acc;
-      padding-left: 1rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .timeline-entry::before {
-      content: '';
-      position: absolute;
-      left: -8px;
-      top: 5px;
-      width: 12px;
-      height: 12px;
-      background-color: #007acc;
-      border-radius: 50%;
-    }
-
-    .timeline-entry .date {
-      font-weight: bold;
-      color: #555;
-      margin-bottom: 0.2rem;
-    }
-
-    .timeline-entry .desc {
-      font-size: 1rem;
-      color: #333;
-    }
-
-    .toggle-btn {
-      background-color: #007acc;
-      color: white;
-      padding: 8px 16px;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 1rem;
-      transition: background-color 0.3s ease;
+      padding-left: 0;
     }
 
-    .toggle-btn:hover {
-      background-color: #005fa3;
-    }
-
-    /* Two-column strip section */
-    .two-column-strip {
+    .timeline-entry .entry-box {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
-      padding: 3rem 2rem;
-      background-color: #eaeaea;
-    }
-
-    .column-text {
-      flex: 1;
-      min-width: 250px;
+      justify-content: space-between;
+      background: #f0f0f0;
+      border-radius: 10px;
       padding: 1.5rem;
+      min-height: 180px;
     }
 
-    .column-text p {
+    .timeline-entry .text {
+      flex: 2;
+      min-width: 250px;
+      padding-right: 1rem;
+    }
+
+    .timeline-entry .text .date {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-entry .text .desc {
       font-family: 'Forum', serif;
-      font-size: 1.3rem;
-      margin-left: 20px;
+      font-size: 1.2rem;
       line-height: 1.6;
-      color: #333;
     }
 
-    .column-image {
+    .timeline-entry .image {
       flex: 1;
-      min-width: 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.5rem;
+      min-width: 180px;
+      text-align: center;
     }
 
-    .column-image img {
-      width: 250px;
-      max-width: 100%;
+    .timeline-entry .image img {
+      width: 100%;
+      max-width: 220px;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 1.5rem 0;
     }
 
     @media screen and (max-width: 768px) {
-      .two-column-strip {
+      .timeline-entry .entry-box {
         flex-direction: column;
+        text-align: center;
+      }
+
+      .timeline-entry .text {
+        padding-right: 0;
       }
     }
   </style>
 </head>
-
 <body>
 
   <nav>
@@ -256,59 +207,52 @@
     </div>
   </div>
 
-  <!-- ✅ Updates Strip Section -->
-  <section class="updates-strip">
-    <div class="overlay">
-      <h2>Updates</h2>
-      <div class="divider"></div>
-    </div>
-  </section>
+  <div class="update-strip">
+    Updates
+  </div>
 
-  <!-- ✅ Timeline Update Section with Collapsible Content -->
   <section class="timeline">
+    <!-- Entry 1 -->
     <div class="timeline-entry">
-      <div class="date">March 13, 2025</div>
-      <div class="desc">Launched the redesigned academic homepage with a fresh banner and timeline section.</div>
-    </div>
-
-    <div class="timeline-collapsible" id="moreUpdates" style="display: none;">
-      <div class="timeline-entry">
-        <div class="date">Feb 28, 2025</div>
-        <div class="desc">Published new paper on quantum information protocols in <i>Journal of Quantum Theory</i>.</div>
-      </div>
-      <div class="timeline-entry">
-        <div class="date">Jan 10, 2025</div>
-        <div class="desc">Started teaching Quantum Mechanics II for Spring 2025 semester.</div>
+      <div class="entry-box">
+        <div class="text">
+          <div class="date">March 13, 2025</div>
+          <div class="desc">Launched the redesigned academic homepage with a fresh banner and timeline section.</div>
+        </div>
+        <div class="image">
+          <img src="homepage-preview.jpg" alt="Homepage Preview">
+        </div>
       </div>
     </div>
+    <hr class="divider">
 
-    <button class="toggle-btn" onclick="toggleUpdates()">Show More</button>
-  </section>
-
-  <!-- ✅ Two Column Highlight Section -->
-  <section class="two-column-strip">
-    <div class="column-text">
-      <p>This is a new section you can use to highlight something — an update, a paper, a collaboration, or any content. It’s elegant and responsive.</p>
+    <!-- Entry 2 -->
+    <div class="timeline-entry">
+      <div class="entry-box">
+        <div class="text">
+          <div class="date">Feb 28, 2025</div>
+          <div class="desc">Published new paper on quantum information protocols in <i>Journal of Quantum Theory</i>.</div>
+        </div>
+        <div class="image">
+          <img src="paper-preview.jpg" alt="Paper Cover">
+        </div>
+      </div>
     </div>
-    <div class="column-image">
-      <img src="uttam.jpg" alt="Another Image of Uttam Singh">
+    <hr class="divider">
+
+    <!-- Entry 3 -->
+    <div class="timeline-entry">
+      <div class="entry-box">
+        <div class="text">
+          <div class="date">Jan 10, 2025</div>
+          <div class="desc">Started teaching Quantum Mechanics II for Spring 2025 semester.</div>
+        </div>
+        <div class="image">
+          <img src="teaching-preview.jpg" alt="Teaching">
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- ✅ Toggle Script -->
-  <script>
-    function toggleUpdates() {
-      const more = document.getElementById('moreUpdates');
-      const btn = document.querySelector('.toggle-btn');
-      if (more.style.display === "none") {
-        more.style.display = "block";
-        btn.innerText = "Show Less";
-      } else {
-        more.style.display = "none";
-        btn.innerText = "Show More";
-      }
-    }
-  </script>
 
 </body>
 </html>
