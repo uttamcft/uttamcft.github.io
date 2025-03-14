@@ -18,19 +18,25 @@
     }
 
     nav {
-      display: flex;
-      justify-content: flex-end;
-      background-color: #ffffff;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+  display: flex;
+  justify-content: flex-end;
+  background-color: #837f7c; /* warm gray */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+
 
     nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-    }
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: text-decoration 0.3s ease;
+  }
+
+   nav a:hover {
+  text-decoration: underline;
+  }
 
 
     .no-underline-link {
