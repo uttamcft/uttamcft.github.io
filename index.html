@@ -34,7 +34,7 @@
 
     .header-strip {
       background-color: #e0e0e0;
-      background-image: url('your-wavy-banner.svg'); /* Replace with actual banner image or SVG */
+      background-image: url('your-wavy-banner.svg'); /* Replace with actual SVG or image file */
       background-size: cover;
       background-position: center;
       color: white;
@@ -60,8 +60,9 @@
     }
 
     .photo-section img {
-      max-width: 200px;
-      width: 100%;
+      width: 200px;       /* ✅ Adjusted Image Size */
+      max-width: 100%;
+      height: auto;
       border-radius: 12px;
     }
 
@@ -128,12 +129,16 @@
     .column-image {
       flex: 1;
       min-width: 250px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 1.5rem;
     }
 
     .column-image img {
+      width: 250px;        /* ✅ Image size control here */
       max-width: 100%;
+      height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -170,7 +175,7 @@
     </div>
   </div>
 
-  <!-- 🔥 Two Column Strip Section (NEW!) -->
+  <!-- 🔥 Two Column Strip Section (New + Image Size Adjusted) -->
   <section class="two-column-strip">
     <div class="column-text">
       <p>This is a new section you can use to highlight something — an update, a paper, a collaboration, or any content. It’s elegant and responsive.</p>
