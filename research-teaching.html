@@ -35,8 +35,11 @@
       text-decoration: underline;
     }
 
-    .header-strip, .publication-strip {
+    .header-strip {
       background-color: #e0e0e0;
+      background-image: url('your-wavy-banner.svg');
+      background-size: cover;
+      background-position: center;
       color: #5f8dc9;
       text-align: center;
       padding: 3rem 1rem;
@@ -73,18 +76,17 @@
     }
 
     .info-image img {
-      width: 90%;
-      max-width: 400px;
+      width: 85%;
       height: auto;
       border-radius: 12px;
       object-fit: cover;
     }
 
     .image-credit {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-family: Arial, sans-serif;
-      color: #666;
       margin-top: 0.5rem;
+      color: #555;
     }
 
     .btn {
@@ -107,6 +109,38 @@
       border: none;
       border-top: 1px solid #ccc;
       margin: 0;
+    }
+
+    .section-heading {
+      background-color: #e0e0e0;
+      color: #5f8dc9;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2rem;
+      font-family: 'Forum', serif;
+    }
+
+    .fullwidth-text {
+      padding: 2rem;
+      font-family: 'Forum', serif;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    .teaching-strip {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #fff;
+    }
+
+    .teaching-column {
+      flex: 1;
+      font-family: 'Forum', serif;
+      font-size: 1.1rem;
+      text-align: left;
+      line-height: 1.8;
     }
 
     footer {
@@ -132,23 +166,6 @@
       height: 80px;
       width: auto;
     }
-
-    a {
-      color: #3467d4;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: #1a3e90;
-    }
-
-    .publication-content {
-      padding: 2rem;
-      background-color: #fff;
-      font-family: 'Forum', serif;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
   </style>
 </head>
 <body>
@@ -164,34 +181,101 @@
     Current Research Interests
   </header>
 
-  <!-- Info strips as before -->
-  <!-- ... (keeping previous info-strip sections unchanged for brevity) -->
+  <section class="info-strip">
+    <div class="info-text">
+      <h2>1. Quantum Thermodynamics</h2>
+      <p>With our ever-increasing ability to manipulate and control small quantum systems,
+        coupled with rapid advancements in technology, it has become essential to develop
+        a deeper understanding of the energetics of these systems...</p>
+      <a href="q-thermo.html" class="btn">Show More</a>
+    </div>
+    <div class="info-image">
+      <img src="q-thermo.jpg" alt="Quantum Thermodynamics">
+      <div class="image-credit">Image Credit: Quanta Magazine</div>
+    </div>
+  </section>
+  <hr class="divider">
+
+  <section class="info-strip">
+    <div class="info-image">
+      <img src="q-comp.jpg" alt="Quantum Computation">
+      <div class="image-credit">Image Credit: Adobe Stock</div>
+    </div>
+    <div class="info-text">
+      <h2>2. Quantum Computation</h2>
+      <p>Scalable quantum computation, capable of outperforming classical
+        systems for a wide range of tasks, fundamentally relies on quantum
+        error correction (QEC)...</p>
+      <a href="q-comp.html" class="btn">Show More</a>
+    </div>
+  </section>
+  <hr class="divider">
+
+  <section class="info-strip">
+    <div class="info-text">
+      <h2>3. Quantum Foundations</h2>
+      <p>Understanding the emergence of classicality from the underlying microscopic
+        quantum dynamics—a process that gives rise to the so-called quantum-classical
+        boundary—has long been a central challenge...</p>
+      <a href="q-found.html" class="btn">Show More</a>
+    </div>
+    <div class="info-image">
+      <img src="qdarwin.jpg" alt="Quantum Foundations">
+      <div class="image-credit">Image Credit: Adobe Stock</div>
+    </div>
+  </section>
+  <hr class="divider">
+
+  <section class="info-strip">
+    <div class="info-image">
+      <img src="qic.jpg" alt="Quantum Information Theory">
+      <div class="image-credit">Image Credit: Innovation News Network</div>
+    </div>
+    <div class="info-text">
+      <h2>4. Quantum Information Theory</h2>
+      <p>Both discrete quantum systems, such as qubits and qudits, and continuous-variable
+        quantum systems, such as modes of light, play crucial roles as testbeds for the study
+        of quantum information theory and quantum computation...</p>
+      <a href="q-info.html" class="btn">Show More</a>
+    </div>
+  </section>
 
   <hr class="divider">
 
-  <header class="publication-strip">
+  <section class="section-heading">
     Recent Publications
-  </header>
-
-  <section class="publication-content">
-    <p>
-      S. Bhattacharyya, U. Singh, A. Sengupta, <i>"Tipping points in fitness landscape of heterogeneous populations"</i>,
-      <a href="#">arXiv:2410.17791</a><br><br>
-
-      Sohail, V. Pandey, U. Singh, S. Das, <i>"Fundamental limitations on the recoverability of quantum processes"</i>,
-      <a href="#">arXiv:2403.12947</a><br><br>
-
-      U. Singh, A. Sawicki, J. K. Korbicz, <i>"Pointer States in the Born-Markov Approximation"</i>,
-      <a href="#">Phys. Rev. Lett. 132, 030203 (2024)</a>, <a href="#">arXiv:2212.09790</a><br><br>
-
-      U. Singh, J. K. Korbicz, N. J. Cerf, <i>"Gaussian work extraction from random Gaussian states is nearly impossible"</i>,
-      <a href="#">Phys. Rev. Res. 5, L032010 (2023)</a>, <a href="#">arXiv:2212.03492</a><br><br>
-
-      A. S. Arora, A. Coladangelo, M. Coudron, A. Gheorghiu, U. Singh, H. Waldner, <i>"Quantum Depth in the Random Oracle Model"</i>,
-      <a href="#">STOC 2023 Proceedings</a>, <a href="#">arXiv:2210.06454</a>
-    </p>
-    <a href="publications.html" class="btn">View All Publications</a>
   </section>
+
+  <div class="fullwidth-text">
+    <p>S. Bhattacharyya, U. Singh, A. Sengupta, "Tipping points in fitness landscape of heterogeneous populations", arXiv:2410.17791.</p>
+    <p>Sohail, V. Pandey, U. Singh, S. Das, "Fundamental limitations on the recoverability of quantum processes", arXiv:2403.12947.</p>
+    <p>U. Singh, A. Sawicki, J. K. Korbicz, "Pointer States in the Born-Markov Approximation", Phys. Rev. Lett. 132, 030203 (2024) [arXiv:2212.09790].</p>
+    <p>U. Singh, J. K. Korbicz, N. J. Cerf, "Gaussian work extraction from random Gaussian states is nearly impossible", Phys. Rev. Res. 5, L032010 (2023) [arXiv:2212.03492].</p>
+    <p>A. S. Arora, A. Coladangelo, M. Coudron, A. Gheorghiu, U. Singh, H. Waldner, "Quantum Depth in the Random Oracle Model", STOC 2023: Proceedings of the 55th Annual ACM Symposium on Theory of Computing, 1111-1124 [arXiv:2210.06454].</p>
+
+    <a href="publications.html" class="btn">See All Publications</a>
+  </div>
+
+  <hr class="divider">
+
+  <section class="section-heading">
+    Teaching
+  </section>
+
+  <div class="teaching-strip">
+    <div class="teaching-column">
+      CV Quantum Information Theory<br>
+      Spring 2024<br><br>
+      Probability and Statistics<br>
+      Monsoon 2023
+    </div>
+    <div class="teaching-column">
+      Quantum Information Theory<br>
+      Spring 2024<br><br>
+      Linear Algebra<br>
+      Monsoon 2023
+    </div>
+  </div>
 
   <footer>
     <div class="footer-text">
