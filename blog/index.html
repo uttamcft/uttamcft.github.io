@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog | Uttam Singh</title>
+  <title>Blog - Uttam Singh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google Font: Forum -->
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,7 +13,6 @@
       background: #f9f9f9;
       color: #333;
     }
-
     nav {
       display: flex;
       justify-content: flex-end;
@@ -25,22 +21,19 @@
       gap: 1.75rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
     nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
       font-family: 'Forum', serif;
       font-size: 1.2rem;
+      transition: text-decoration 0.3s ease;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     .header-strip {
       background-color: #e0e0e0;
-      background-image: url('your-wavy-banner.svg');
       background-size: cover;
       background-position: center;
       color: #5f8dc9;
@@ -48,29 +41,37 @@
       padding: 3rem 1rem;
       font-size: 2.5rem;
       font-family: 'Forum', serif;
+      font-weight: normal;
     }
-
-    .post-preview {
-      border: 1px solid #ccc;
-      padding: 1.5rem;
-      margin: 2rem auto;
-      max-width: 800px;
-      border-radius: 10px;
-      background: white;
+    .main-wrapper {
+      display: flex;
+      padding: 2rem;
     }
-
-    .post-preview h2 {
+    .content-column {
+      flex: 3;
+      padding-right: 2rem;
+      border-right: 1px solid #ccc;
+    }
+    .sidebar-column {
+      flex: 1;
+      padding-left: 2rem;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .post {
+      margin-bottom: 2rem;
+    }
+    .post-title {
       font-family: 'Forum', serif;
-      font-size: 1.8rem;
-      color: #444;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #5c91da;
     }
-
-    .post-preview p {
-      font-size: 1.1rem;
+    .post-summary {
+      font-size: 1rem;
       line-height: 1.6;
     }
-
-    .read-button {
+    .btn {
       display: inline-block;
       margin-top: 1rem;
       padding: 10px 20px;
@@ -81,17 +82,29 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
-
-    .read-button:hover {
+    .btn:hover {
       background-color: #2871d6;
     }
-
-    .footer-divider {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 2rem 0 0;
+    .past-posts h3 {
+      font-family: 'Forum', serif;
+      font-size: 1.5rem;
+      color: #444;
     }
-
+    .past-posts ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .past-posts li {
+      margin-bottom: 0.75rem;
+    }
+    .past-posts a {
+      text-decoration: none;
+      color: #5c91da;
+      font-size: 1rem;
+    }
+    .past-posts a:hover {
+      text-decoration: underline;
+    }
     footer {
       display: flex;
       justify-content: space-between;
@@ -99,118 +112,79 @@
       margin-left: 10px;
       padding: 1rem 2rem;
       background-color: #dad8d9;
-      font-size: 2rem;
+      font-size: 1.2rem;
       font-family: 'Forum', serif;
       color: black;
     }
-
-    .footer-logos {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 0.5rem;
-    }
-
-    .footer-logos img {
-      height: 80px;
-      width: auto;
-      object-fit: contain;
-      display: inline-block;
-    }
-
-    /* Comments section */
     .comments-section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      border-top: 2px solid #ccc;
+      margin-top: 3rem;
+      padding: 1rem;
+      border-top: 1px solid #ccc;
     }
-
     .comments-section h3 {
       font-family: 'Forum', serif;
       font-size: 1.5rem;
+      color: #444;
     }
-
     .comments-section textarea {
       width: 100%;
-      height: 120px;
-      margin-top: 0.5rem;
-      padding: 0.75rem;
-      border: 1px solid #aaa;
-      border-radius: 6px;
+      padding: 1rem;
       font-size: 1rem;
+      margin-bottom: 1rem;
     }
-
     .comments-section button {
-      margin-top: 0.75rem;
-      padding: 10px 20px;
-      font-size: 1rem;
       background-color: #5c91da;
       color: white;
+      padding: 0.5rem 1rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       cursor: pointer;
     }
-
-    .comments-section button:hover {
-      background-color: #2871d6;
-    }
   </style>
-
-  <!-- MathJax for LaTeX rendering -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
 </head>
 <body>
-
   <nav>
-    <a href="/index.html">Home</a>
-    <a href="/research-teaching.html">Research & Teaching</a>
-    <a href="/students.html">Students</a>
-    <a href="/join.html">Join Us!</a>
-    <a href="/contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="research-teaching.html">Research & Teaching</a>
+    <a href="students.html">Students</a>
+    <a href="join.html">Join Us!</a>
+    <a href="contact.html">Contact</a>
   </nav>
-
-  <header class="header-strip">
-    Blog Posts
-  </header>
-
-  <div class="post-preview">
-    <h2>Pythagoras’ Theorem</h2>
-    <p>This post explores the fundamental equation of Pythagoras’ theorem. The equation \( a^2 + b^2 = c^2 \) defines the relationship between the sides of a right triangle.</p>
-    <a href="post1.html" class="read-button">Read Full Post</a>
+  <header class="header-strip">Blog</header>
+  <div class="main-wrapper">
+    <div class="content-column">
+      <div class="post">
+        <div class="post-title">Title of Blog Post 1</div>
+        <div class="post-summary">This is a brief summary or excerpt from the blog post. $$E = mc^2$$
+        <br><a class="btn" href="post1.html">Read Full Post</a></div>
+      </div>
+      <div class="post">
+        <div class="post-title">Title of Blog Post 2</div>
+        <div class="post-summary">Another summary of a second blog post. Mathematical notation: $$\int x dx = \frac{x^2}{2}$$
+        <br><a class="btn" href="post2.html">Read Full Post</a></div>
+      </div>
+      <div class="comments-section">
+        <h3>Comments</h3>
+        <textarea rows="5" placeholder="Leave a comment..."></textarea>
+        <br>
+        <button>Submit</button>
+      </div>
+    </div>
+    <div class="sidebar-column past-posts">
+      <h3>Past Posts</h3>
+      <ul>
+        <li><a href="post1.html">Title of Blog Post 1</a></li>
+        <li><a href="post2.html">Title of Blog Post 2</a></li>
+      </ul>
+    </div>
   </div>
-
-  <div class="post-preview">
-    <h2>Definite Integrals in Probability</h2>
-    <p>In this post, we look into definite integrals and how \[ \int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \] plays a key role in probability theory.</p>
-    <a href="post2.html" class="read-button">Read Full Post</a>
-  </div>
-
-  <!-- Comments Section -->
-  <div class="comments-section">
-    <h3>Leave a Comment</h3>
-    <textarea placeholder="Write your thoughts here..."></textarea><br>
-    <button type="button">Submit Comment</button>
-  </div>
-
-  <hr class="footer-divider">
-
   <footer>
-    <div class="footer-text">
-      Centre for Quantum Science and Technology (CQST)
-    </div>
-    <div class="footer-logos">
-      <a href="https://www.iiit.ac.in/" target="_blank">
-        <img src="25th-logo.png" alt="25th">
-      </a>
-      <a href="https://www.iiit.ac.in/" target="_blank">
-        <img src="IIIT.png" alt="IIIT">
-      </a>
-    </div>
+    <div>Centre for Quantum Science and Technology (CQST)</div>
+    <div><a href="https://www.iiit.ac.in/"><img src="IIIT.png" alt="IIIT" height="40"></a></div>
   </footer>
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </body>
 </html>
