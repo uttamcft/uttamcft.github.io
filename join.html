@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Join Us - Uttam Singh</title>
+  <title>Join Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Font: Forum -->
@@ -39,25 +39,28 @@
       text-decoration: underline;
     }
 
-    .header-announcement {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
+    .header-strip {
       background-color: #e0e0e0;
-      font-family: 'Forum', serif;
-      font-size: 1.7rem;
-      color: black;
-    }
-
-    .strip-section {
       background-image: url('your-wavy-banner.svg');
       background-size: cover;
       background-position: center;
-      padding: 2rem;
+      color: black;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 1.5rem;
       font-family: 'Forum', serif;
+      font-weight: normal;
+    }
+
+    .info-strip {
+      background-image: url('your-wavy-banner.svg');
+      background-size: cover;
+      background-position: center;
+      color: black;
+      padding: 2rem;
       font-size: 1.4rem;
-      color: #333;
+      line-height: 1.8;
+      font-family: 'Forum', serif;
       white-space: pre-line;
     }
 
@@ -99,6 +102,7 @@
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="research-teaching.html">Research & Teaching</a>
@@ -107,12 +111,11 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="header-announcement">
-    <span>Are you passionate about quantum information science and computational advancements?</span>
-    <span>We, at CQST, offer a dynamic and collaborative research environment with opportunities to work on groundbreaking quantum technologies.​ Read below for more details!</span>
-  </div>
+  <header class="header-strip">
+    Are you passionate about quantum information science and computational advancements? We, at CQST, offer a dynamic and collaborative research environment with opportunities to work on groundbreaking quantum technologies.​ Read below for more details!
+  </header>
 
-  <div class="strip-section">
+  <div class="info-strip">
 PhDs and Postdocs: We are always looking for highly motivated individuals who are passionate about contributing to the quantum information theory and computation. If your research interests aligns with me, reach out to me via email attaching your CV and a research statement. 
 
 Currently, my colleague Shantanav Chakraborty and I are looking for bright PhD students to work on quantum computation, algorithms and complexity at CQST. For more details, please look at this link.
@@ -123,6 +126,7 @@ Visitors: I am not accommodating any short or long-term visitor as of now. This 
   </div>
 
   <hr class="footer-divider">
+
   <footer>
     <div class="footer-text">
       Centre for Quantum Science and Technology (CQST)
@@ -136,5 +140,6 @@ Visitors: I am not accommodating any short or long-term visitor as of now. This 
       </a>
     </div>
   </footer>
+
 </body>
 </html>
