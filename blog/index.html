@@ -109,17 +109,41 @@
     .past-posts a:hover {
       text-decoration: underline;
     }
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-left: 10px;
-      padding: 1rem 2rem;
-      background-color: #dad8d9;
-      font-size: 1.2rem;
-      font-family: 'Forum', serif;
-      color: black;
-    }
+    .footer-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0 0;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    padding: 1rem 2rem;
+    background-color: #dad8d9;
+    font-size: 2rem;
+    font-family: 'Forum', serif;
+    color: black;
+  }
+
+  .footer-text {
+    flex: 1;
+  }
+
+  .footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .footer-logos img {
+    height: 80px;        /* Very small height */
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+  }
     .comments-section {
       margin-top: 3rem;
       padding: 1rem;
