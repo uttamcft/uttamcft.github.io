@@ -109,41 +109,17 @@
     .past-posts a:hover {
       text-decoration: underline;
     }
-    .footer-divider {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 2rem 0 0;
-  }
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10px;
-    padding: 1rem 2rem;
-    background-color: #dad8d9;
-    font-size: 2rem;
-    font-family: 'Forum', serif;
-    color: black;
-  }
-
-  .footer-text {
-    flex: 1;
-  }
-
-  .footer-logos {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.5rem;
-  }
-
-  .footer-logos img {
-    height: 80px;        /* Very small height */
-    width: auto;
-    object-fit: contain;
-    display: inline-block;
-  }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 10px;
+      padding: 1rem 2rem;
+      background-color: #dad8d9;
+      font-size: 1.2rem;
+      font-family: 'Forum', serif;
+      color: black;
+    }
     .comments-section {
       margin-top: 3rem;
       padding: 1rem;
@@ -154,11 +130,21 @@
       font-size: 1.5rem;
       color: #444;
     }
+    .comments-section input[type="email"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
     .comments-section textarea {
       width: 100%;
       padding: 1rem;
       font-size: 1rem;
       margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
     .comments-section button {
       background-color: #5c91da;
@@ -167,6 +153,16 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+    }
+    .comment-display {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+    }
+    .comment-entry {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed #ccc;
     }
   </style>
 </head>
@@ -178,53 +174,57 @@
     <a href="join.html">Join Us!</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <header class="header-strip">Posts</header>
+  <header class="header-strip">Blog</header>
   <div class="main-wrapper">
     <div class="content-column">
       <div class="post">
-        <div class="post-title">2. Ergotropy and Clifford group</div>
-        <div class="post-summary">This is a brief summary or excerpt from the blog post. $$E = mc^2$$
-        <br><a class="btn" href="post1.html">Read Full Post</a></div>
+        <div class="post-title">Title of Blog Post 1</div>
+        <div class="post-summary">This is a brief summary or excerpt from the blog post. $$E = mc^2$$<br><a class="btn" href="post1.html">Read Full Post</a></div>
       </div>
       <div class="post-divider"></div>
       <div class="post">
-        <div class="post-title">1. Ergotropy and Clifford group</div>
-        <div class="post-summary">Another summary of a second blog post. Mathematical notation: $$\int x dx = \frac{x^2}{2}$$
-        <br><a class="btn" href="post2.html">Read Full Post</a></div>
+        <div class="post-title">Title of Blog Post 2</div>
+        <div class="post-summary">Another summary of a second blog post. Mathematical notation: $$\int x dx = \frac{x^2}{2}$$<br><a class="btn" href="post2.html">Read Full Post</a></div>
       </div>
       <div class="comments-section">
         <h3>Comments</h3>
-        <textarea rows="5" placeholder="Leave a comment..."></textarea>
+        <input type="email" id="email" placeholder="Enter your email to comment..." required>
+        <textarea id="comment" rows="5" placeholder="Leave a comment..."></textarea>
         <br>
-        <button>Submit</button>
+        <button onclick="submitComment()">Submit</button>
+        <div class="comment-display" id="commentDisplay"></div>
       </div>
     </div>
     <div class="sidebar-column past-posts">
       <h3>Past Posts</h3>
       <ul>
-        <li><a href="post1.html">1. Ergotropy and Clifford group</a></li>
-        <li><a href="post2.html">2. Ergotropy and Clifford group</a></li>
+        <li><a href="post1.html">Title of Blog Post 1</a></li>
+        <li><a href="post2.html">Title of Blog Post 2</a></li>
       </ul>
     </div>
   </div>
-  <hr class="footer-divider">
-
   <footer>
-    <div class="footer-text">
-      Centre for Quantum Science and Technology (CQST)
-    </div>
-    <div class="footer-logos">
-      <a href="https://www.iiit.ac.in/" target="_blank">
-        <img src="25th-logo.png" alt="25th">
-      </a>
-      <a href="https://www.iiit.ac.in/" target="_blank">
-        <img src="IIIT.png" alt="IIIT">
-      </a>
-    </div>
+    <div>Centre for Quantum Science and Technology (CQST)</div>
+    <div><a href="https://www.iiit.ac.in/"><img src="IIIT.png" alt="IIIT" height="40"></a></div>
   </footer>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    function submitComment() {
+      const email = document.getElementById('email').value.trim();
+      const comment = document.getElementById('comment').value.trim();
+      if (!email || !comment) {
+        alert("Please enter a valid email and comment.");
+        return;
+      }
+      const commentBox = document.getElementById('commentDisplay');
+      const newEntry = document.createElement('div');
+      newEntry.classList.add('comment-entry');
+      newEntry.innerHTML = `<strong>${email}</strong><br>${comment}`;
+      commentBox.prepend(newEntry);
+      document.getElementById('email').value = '';
+      document.getElementById('comment').value = '';
+    }
   </script>
 </body>
 </html>
