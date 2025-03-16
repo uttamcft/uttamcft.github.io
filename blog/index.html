@@ -1,16 +1,54 @@
-<!-- blog/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Blog</title>
-  <link rel="stylesheet" href="../style.css"> <!-- optional -->
+  <title>Blog</title>
+  <style>
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .post-preview {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .read-button {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Blog</h1>
-  <ul>
-    <li><a href="post1.html">Post Title 1</a></li>
-    <li><a href="post2.html">Post Title 2</a></li>
-  </ul>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+
+  <h1>My Blog</h1>
+
+  <div class="post-preview">
+    <h2>My First Blog Post</h2>
+    <p>This post explores the fundamental equation of Pythagoras’ theorem. The equation \( a^2 + b^2 = c^2 \) defines the relationship between the sides of a right triangle.</p>
+    <a href="post1.html" class="read-button">Read Full Post</a>
+  </div>
+
+  <div class="post-preview">
+    <h2>Another Blog Post</h2>
+    <p>In this post, we look into definite integrals and how \[ \int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \] plays a key role in probability theory.</p>
+    <a href="post2.html" class="read-button">Read Full Post</a>
+  </div>
+
+  <!-- MathJax script (so LaTeX works here too!) -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </body>
 </html>
