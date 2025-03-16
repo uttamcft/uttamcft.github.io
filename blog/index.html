@@ -2,53 +2,215 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog</title>
+  <title>Blog | Uttam Singh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font: Forum -->
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
   <style>
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: bold;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
     }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #5f8dc9;
+      padding: 1rem 2rem;
+      gap: 1.75rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-family: 'Forum', serif;
+      font-size: 1.2rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .header-strip {
+      background-color: #e0e0e0;
+      background-image: url('your-wavy-banner.svg');
+      background-size: cover;
+      background-position: center;
+      color: #5f8dc9;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 2.5rem;
+      font-family: 'Forum', serif;
+    }
+
     .post-preview {
       border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 20px;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      max-width: 800px;
       border-radius: 10px;
+      background: white;
     }
+
+    .post-preview h2 {
+      font-family: 'Forum', serif;
+      font-size: 1.8rem;
+      color: #444;
+    }
+
+    .post-preview p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
     .read-button {
       display: inline-block;
-      padding: 5px 10px;
-      background-color: #0077cc;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #5c91da;
       color: white;
       text-decoration: none;
       border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-button:hover {
+      background-color: #2871d6;
+    }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0 0;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 10px;
+      padding: 1rem 2rem;
+      background-color: #dad8d9;
+      font-size: 2rem;
+      font-family: 'Forum', serif;
+      color: black;
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+
+    .footer-logos img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      display: inline-block;
+    }
+
+    /* Comments section */
+    .comments-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-top: 2px solid #ccc;
+    }
+
+    .comments-section h3 {
+      font-family: 'Forum', serif;
+      font-size: 1.5rem;
+    }
+
+    .comments-section textarea {
+      width: 100%;
+      height: 120px;
+      margin-top: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .comments-section button {
+      margin-top: 0.75rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #5c91da;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .comments-section button:hover {
+      background-color: #2871d6;
     }
   </style>
+
+  <!-- MathJax for LaTeX rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
+
   <nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
+    <a href="/index.html">Home</a>
+    <a href="/research-teaching.html">Research & Teaching</a>
+    <a href="/students.html">Students</a>
+    <a href="/join.html">Join Us!</a>
+    <a href="/contact.html">Contact</a>
   </nav>
 
-  <h1>My Blog</h1>
+  <header class="header-strip">
+    Blog Posts
+  </header>
 
   <div class="post-preview">
-    <h2>My First Blog Post</h2>
+    <h2>Pythagoras’ Theorem</h2>
     <p>This post explores the fundamental equation of Pythagoras’ theorem. The equation \( a^2 + b^2 = c^2 \) defines the relationship between the sides of a right triangle.</p>
     <a href="post1.html" class="read-button">Read Full Post</a>
   </div>
 
   <div class="post-preview">
-    <h2>Another Blog Post</h2>
+    <h2>Definite Integrals in Probability</h2>
     <p>In this post, we look into definite integrals and how \[ \int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \] plays a key role in probability theory.</p>
     <a href="post2.html" class="read-button">Read Full Post</a>
   </div>
 
-  <!-- MathJax script (so LaTeX works here too!) -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+  <!-- Comments Section -->
+  <div class="comments-section">
+    <h3>Leave a Comment</h3>
+    <textarea placeholder="Write your thoughts here..."></textarea><br>
+    <button type="button">Submit Comment</button>
+  </div>
+
+  <hr class="footer-divider">
+
+  <footer>
+    <div class="footer-text">
+      Centre for Quantum Science and Technology (CQST)
+    </div>
+    <div class="footer-logos">
+      <a href="https://www.iiit.ac.in/" target="_blank">
+        <img src="25th-logo.png" alt="25th">
+      </a>
+      <a href="https://www.iiit.ac.in/" target="_blank">
+        <img src="IIIT.png" alt="IIIT">
+      </a>
+    </div>
+  </footer>
+
 </body>
 </html>
