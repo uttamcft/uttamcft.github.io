@@ -2,34 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My First Blog Post</title>
+  <title>Title of Blog Post 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
   <style>
-    nav a {
-      margin-right: 20px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-family: 'Forum', serif;
+      font-size: 2.5rem;
+      color: #5c91da;
+    }
+    .content {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    a {
+      color: #5c91da;
       text-decoration: none;
-      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-  </nav>
-
-  <h1>My First Blog Post</h1>
-  <p><em>Posted on March 16, 2025</em></p>
-
-  <p>Today, we explore one of the most beautiful results in elementary geometry: the Pythagorean theorem.</p>
-
-  <p>The theorem states that in a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides:</p>
-
-  <p>\[ a^2 + b^2 = c^2 \]</p>
-
-  <p>This fundamental relationship has deep implications not just in geometry, but in trigonometry, algebra, and even number theory.</p>
+  <h1>Title of Blog Post 1</h1>
+  <div class="content">
+    <p>This is the full content of the first blog post. Here you can write detailed paragraphs, include images, and even math formulas like $$E = mc^2$$ using MathJax.</p>
+    <p><a href="index.html">← Back to Blog</a></p>
+  </div>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </body>
 </html>
