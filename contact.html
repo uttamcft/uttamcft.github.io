@@ -1,1 +1,205 @@
-<h2>Contact</h2><p>This is the contact page. Add your email and address here.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Uttam Singh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font: Forum -->
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #5f8dc9;
+      padding: 1rem 2rem;
+      gap: 1.75rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-family: 'Forum', serif;
+      font-size: 1.2rem;
+      transition: text-decoration 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .header-strip {
+      background-color: #e0e0e0;
+      background-image: url('your-wavy-banner.svg');
+      background-size: cover;
+      background-position: center;
+      color: #5f8dc9;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 2.5rem;
+      font-family: 'Forum', serif;
+      font-weight: normal;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .contact-left, .contact-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-left h2 {
+      font-family: 'Forum', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+      font-weight: normal;
+    }
+
+    .image-links-small {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .image-links-small img {
+      width: 30px;
+      height: auto;
+      border-radius: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .image-links-small img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-info {
+      font-family: 'Forum', serif;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: #444;
+      white-space: pre-line;
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0 0;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 10px;
+      padding: 1rem 2rem;
+      background-color: #dad8d9;
+      font-size: 2rem;
+      font-family: 'Forum', serif;
+      color: black;
+    }
+
+    .footer-text {
+      flex: 1;
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+
+    .footer-logos img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research-teaching.html">Research & Teaching</a>
+    <a href="students.html">Students</a>
+    <a href="join.html">Join Us!</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header class="header-strip">
+    Contact
+  </header>
+
+  <div class="contact-container">
+    <div class="contact-left">
+      <h2>Uttam Singh</h2>
+      <div class="image-links-small">
+        <a href="https://scholar.google.co.in/citations?user=jCWgwz8AAAAJ&hl=en" target="_blank">
+          <img src="scholar.png" alt="Google Scholar">
+        </a>
+        <a href="http://arxiv.org/a/singh_u_1" target="_blank">
+          <img src="arxiv.png" alt="arXiv">
+        </a>
+        <a href="https://www.linkedin.com/in/uttam-singh-89780549/" target="_blank">
+          <img src="linkedin.png" alt="Linkedin">
+        </a>
+      </div>
+      <div class="contact-info">
+Center for Quantum Science and Technology (CQST)
+
+International Institute of Information Technology Hyderabad
+
+Prof. C R Rao Road, Gachibowli 500032, India.
+
+email: uttam[at]iiit[dot]ac[dot]in
+      </div>
+    </div>
+    <div class="contact-right map-embed">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2840917092377!2d78.38174687404082!3d17.441306983885153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93c2d5a442a5%3A0x7c5eb2a3e9bb0a61!2sInternational%20Institute%20of%20Information%20Technology%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1710412446202!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <footer>
+    <div class="footer-text">
+      Centre for Quantum Science and Technology (CQST)
+    </div>
+    <div class="footer-logos">
+      <a href="https://www.iiit.ac.in/" target="_blank">
+        <img src="25th-logo.png" alt="25th">
+      </a>
+      <a href="https://www.iiit.ac.in/" target="_blank">
+        <img src="IIIT.png" alt="IIIT">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
