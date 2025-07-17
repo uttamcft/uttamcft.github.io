@@ -114,14 +114,16 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4; /* or however many lines you want */
+  -webkit-line-clamp: 2; /* Change this to how many lines you want to show */
+  transition: all 0.3s ease;
 }
 
-.expanded {
+.collapsible-text.expanded {
   -webkit-line-clamp: unset;
   display: block;
 }
 
+    
 button {
   margin-top: 1 rem;
   padding: 10px 20px;
@@ -340,11 +342,9 @@ button:hover {
     Teaching
   </section>
 
-  <div id="para2" class="teaching-strip collapsible-text">
-  <div class="teaching-columns">
+  <div id="para2" class="teaching-strip">
+  <div class="teaching-columns collapsible-text" id="collapse-content">
     <div class="teaching-column">
-      Real Analysis<br>
-      Monsoon 2025<br><br>
       CV Quantum Information Theory<br>
       Spring 2024<br><br>
       Probability and Statistics<br>
@@ -358,7 +358,7 @@ button:hover {
     </div>
   </div>
   <div class="teaching-button-container">
-    <button onclick="toggleText('para2', this)" class="btn">Show More</button>
+    <button class="btn" onclick="toggleText('collapse-content', this)">Show More</button>
   </div>
 </div>
 
@@ -382,9 +382,9 @@ button:hover {
 
   <script>
     function toggleText(id, button) {
-      const el = document.getElementById(id);
-      el.classList.toggle('expanded');
-      button.textContent = el.classList.contains('expanded') ? 'Show Less' : 'Show More';
+  const el = document.getElementById(id);
+  el.classList.toggle('expanded');
+  button.textContent = el.classList.contains('expanded') ? 'Show Less' : 'Show More';
     }
   </script>
 </body>
