@@ -107,39 +107,6 @@
 
 
 
-  .collapsible-text {
-  font-family: 'Forum', serif;
-  font-size: 18px;
-  line-height: 1.6;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* Change this to how many lines you want to show */
-  transition: all 0.3s ease;
-}
-
-.collapsible-text.expanded {
-  -webkit-line-clamp: unset;
-  display: block;
-}
-
-    
-button {
-  margin-top: 1 rem;
-  padding: 10px 20px;
-  background-color: #5c91da;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #2871d6;
-}
-    
-
     .btn {
       display: inline-block;
       margin-top: 1rem;
@@ -196,7 +163,7 @@ button:hover {
 
 
 
-    .teaching-strip {
+  .teaching-strip {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -210,10 +177,7 @@ button:hover {
   gap: 2rem;
 }
 
-.teaching-button-container {
-  display: flex;
-  justify-content: flex-end;
-}
+
 
 
 
@@ -342,9 +306,9 @@ button:hover {
     Teaching
   </section>
 
-  <div id="para2" class="teaching-strip">
-  <div class="teaching-columns collapsible-text" id="collapse-content">
-    <div class="teaching-column">
+  <div class="teaching-strip">
+    <div class="teaching-columns>
+      <div class="teaching-column">
       CV Quantum Information Theory<br>
       Spring 2024<br><br>
       Probability and Statistics<br>
@@ -356,9 +320,6 @@ button:hover {
       Linear Algebra<br>
       Monsoon 2023
     </div>
-  </div>
-  <div class="teaching-button-container">
-    <button class="btn" onclick="toggleText('collapse-content', this)">Show More</button>
   </div>
 </div>
 
@@ -380,12 +341,6 @@ button:hover {
     </div>
   </footer>
 
-  <script>
-    function toggleText(id, button) {
-  const el = document.getElementById(id);
-  el.classList.toggle('expanded');
-  button.textContent = el.classList.contains('expanded') ? 'Show Less' : 'Show More';
-    }
-  </script>
+  
 </body>
 </html>
