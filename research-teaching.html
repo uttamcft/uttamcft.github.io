@@ -107,39 +107,6 @@
 
 
 
-    .collapsible-text {
-  font-family: 'Forum', serif;
-  font-size: 18px;
-  line-height: 1.6;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4; /* or however many lines you want */
-}
-
-.expanded {
-  -webkit-line-clamp: unset;
-  display: block;
-}
-
-button {
-  margin-top: 10px;
-  padding: 6px 12px;
-  background-color: #004080;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  background-color: #0066cc;
-}
-
-
-
-
-
 
     
 
@@ -316,7 +283,7 @@ button:hover {
     Teaching
   </section>
 
-  <div id="para2" class="teaching-strip collapsible-text">
+  <div class="teaching-strip">
     <div class="teaching-column">
       CV Quantum Information Theory<br>
       Spring 2024<br><br>
@@ -329,7 +296,6 @@ button:hover {
       Linear Algebra<br>
       Monsoon 2023
     </div>
-    <button onclick="toggleText('para2', this)">Show More</button>
   </div>
 
   <footer>
