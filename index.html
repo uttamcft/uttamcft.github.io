@@ -162,6 +162,14 @@
       color: #444;
     }
 
+    .header-strip .header-image {
+  margin-top: 1rem;
+  max-width: 90%;   /* makes it responsive */
+  height: auto;
+  border-radius: 12px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* subtle shadow */
+}
+    
     .image-links-small {
   display: flex;
   justify-content: flex-start;
@@ -295,7 +303,8 @@
   </nav>
 
   <header class="header-strip">
-    Welcome to my page!
+    Welcome to my page!<br>
+    <img src="group-photo.jpg" alt="Group Picture" class="header-image">
   </header>
 
   <div class="main-container">
